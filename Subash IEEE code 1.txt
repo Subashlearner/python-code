@@ -1,0 +1,32 @@
+print("Subash IEEE code 1")
+x=int(input("Enter size of array:"))
+a=[]
+sum=0
+
+for i in range(x):
+	y=int(input("Enter element:"))
+	a.append(y)
+
+max=min=a[0]
+for j in range(x):
+	sum+=a[j]
+	if a[j]>max:
+		max=a[j]
+	if a[j]<min:
+		min=a[j]
+
+for k in range(x):
+	rev=0
+	temp=a[k]
+	while temp!=0 :
+		rem=temp%10
+		rev=(rev*10)+rem
+		temp=temp//10
+	a[k]=rev
+print("The total before reversal:",sum)
+print("Maximum:",max)
+print("Minimum:",min)
+print("The array after reversing each element:")
+for l in range(x):
+	print(a[l])
+		
